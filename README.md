@@ -1,1 +1,2 @@
 # GoNature
+The Go Nature website is a dedicated platform designed to connect individuals with various environmental events and activities. It serves as a hub for eco-conscious users to discover, join, and participate in events such as clean-up drives, tree planting sessions, educational workshops, and sustainability fairs. By offering a comprehensive event listing, Go Nature encourages community engagement and promotes environmental awareness. 
