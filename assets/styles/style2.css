@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
+h2,
+h3 {
+  color: #1E5128;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 250px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  width: 320px;
+  height: 230px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: white;
+
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #1E5128;
+  text-align: center;
+  color: white;
+}
+
+h3 a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: #4E9F3D;
+}
+
+h3 a:hover {
+  font-weight: bold;
+}
+
+main {
+  background-color: #D8E9A8;
+  padding: 20px;
+  padding-top: 80px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 4;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.container {
+  flex: 2;
+
+  display: flex;
+  flex-flow: column nowrap;
+  
+}
+
+aside {
+  margin-bottom: 15px;
+ 
+}
+
+.justifikasi {
+  text-align: justify;
+}
+
+table th {
+  text-align: left;
+}
+
+.card_event, .card_event2  {
+    text-decoration: none;
+    color: #333; /* warna teks */
+    background-color: #fff; /* warna latar belakang */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* bayangan */
+    transition: transform 0.3s ease; /* efek transisi saat dihover */
+
+    display: block;
+    max-width: 300px; /* lebar maksimum kartu */
+    margin: 20px;
+}
+
+.card_event:hover, .card_event2:hover {
+    transform: scale(1.05); /* memperbesar kartu saat dihover */
+}
+
+.card_event h3, .card_event2 h3 {
+    margin: 0;
+    padding: 10px;
+/*    font-size: 1.5em;*/
+}
+
+.card_event figure, .card_event2 figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.card_event img, .card_event2 img {
+    width: 100%; /* gambar mengisi lebar */
+    height: auto;
+    display: block;
+}
+
+.card_event section, .card_event2 section {
+    padding: 10px;
+}
+
+.card_event p, .card_event2 p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666; /* warna teks abu-abu */
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}

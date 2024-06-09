@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contact Us Page</title>
+	<link rel="stylesheet" href="styleContact.css">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="nav_logo">Go Nature</a>
+		<nav class="nav">
+			<ul class="nav_items">
+				<li class="nav_item"><a href="index.html" class="nav_link">Informasi & Event</a></li>
+				<li class="nav_item"><a href="#" class="nav_link">Berita</a></li>
+				<li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
+				<button class="button1" id="form-open">Login</button>
+			</ul>			
+			<div class="menu_icon" id="menu-icon">&#9776;</div>
+		</nav>
+	</header>
+	<main>
+		<div class="contact-form">
+			<h1>Contact Us</h1>
+			<div class="container">
+				<div class="main">
+					<div class="content">
+						<h2>Contact Us</h2>
+						<form action="#" method="post">
+							<input type="text" name="name" class="name_contact" placeholder="Enter Your Name">
+							
+							<input type="email" name="name" class="name_contact" placeholder="Enter Your Email">
+							<textarea name="message" placeholder="Your Message"></textarea>                   
+							<button type="submit" class="btn1">Send <i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+					<div class="form-img">
+						<img src="Frame.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div> 
+	</main>
+    
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="Login.php" method="POST">
+            <h2>Login</h2>
+
+            <div class="input_box">
+              <input type="email" name="login_email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" name="login_password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button" type="submit" name="login">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+        </div>
+
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="Login.php" method="POST">
+            <h2>Signup</h2>
+
+            <div class="input_box">
+              <input type="email" name="signup_email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password"  name="signup_password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" name="confirm_password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button" type="submit" name="signup">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	  <script src="script.js"></script>
+</body>
+</html>

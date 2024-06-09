@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.action {
+  /* position: fixed; */
+  top: 15px;
+  right: 30px;
+/*  padding-bottom: 10px;*/
+  display: flex;
+  align-items: center;
+}
+
+.action .profil {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 13px;
+}
+
+.action .profil img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action .menu {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background: #fff;
+  width: 250px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s linear 0.5s;
+  z-index: 1;
+  margin-right: 13px;
+  padding: 10px;
+}
+
+.action .menu.active {
+  visibility: visible;
+  top: 80px;
+  opacity: 1;
+  transition: opacity 0.5s, visibility 0s;
+  margin-right: 13px;
+}
+
+.action .menu::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.action .menu h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.2em;
+}
+
+.action .menu ul li {
+  list-style: none;
+  padding: 10px 0 10px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex; /* Perbaiki baris ini */
+  align-items: center;
+  justify-content: left; /* Perbaiki baris ini */
+}
+
+.action .menu ul li i{
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.action .menu ul li:hover img {
+  opacity: 1;
+}
+
+.action .menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.action .menu ul li:hover a {
+  color: skyblue;
+}
+
+.fa, .fas {
+  font-weight: 700;
+  font-size: 20px;
+  color: grey;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*CSS NAVBAR*/
+
+.header {
+  background-color: #0F988C;
+  padding: 10px 0px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+/*  padding: 0 10px;*/
+}
+.nav {
+  max-width: 1100px;
+/*  width: 100%;*/
+  margin-left: auto;
+  padding: 10px 20px 10px 10px;
+}
+.nav,
+.nav_item {
+  display: flex;
+/*  height: 100%;*/
+  align-items: center;
+  justify-content: space-between;
+}
+.nav_logo,
+.nav_link,
+.button1 {
+  color: #fff;
+}
+
+.nav_logo {
+  font-size: 25px;
+  padding-left: 10px;
+/*  display: block;*/
+}
+
+.nav_items {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  column-gap: 20px;
+  padding-right: 145px;
+  align-items: center;
+}
+
+
+.nav_item {
+/*  column-gap: 25px;*/
+  margin-right: 20px;
+}
+.nav_link:hover {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+.menu_icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .nav_items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #0F969C; /* Warna latar belakang menu */
+    text-align: right;
+    padding: 10px; /* Padding untuk memberikan ruang di sekitar setiap item menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek mendalam */
+    z-index: 1; /* Menempatkan menu di atas elemen lain */
+
+    /* Transisi untuk efek animasi */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav_items.show {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .nav_item {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .button1 {
+    display: block;
+    margin: 10px;
+  }
+
+  .nav_logo {
+    display: block;
+  }
+
+  .menu_icon{
+    display: block;
+    margin-left: auto;
+  }
+}
+
+
+/*CSS CARD*/
+
+main {
+  background-color: #D8E9A8;
+  padding: 20px;
+  padding-top: 80px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+h2,
+h3 {
+  color: #1E5128;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 250px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  width: 320px;
+  height: 230px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: white;
+
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #1E5128;
+  text-align: center;
+  color: white;
+}
+
+h3 a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: #4E9F3D;
+}
+
+h3 a:hover {
+  font-weight: bold;
+}
+
+#content {
+  flex: 4;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.container {
+  flex: 2;
+
+  display: flex;
+  flex-flow: column nowrap;
+  
+}
+
+aside {
+  margin-bottom: 15px;
+ 
+}
+
+.justifikasi {
+  text-align: justify;
+}
+
+.card_event, .card_event2  {
+    text-decoration: none;
+    color: #333; /* warna teks */
+    background-color: #fff; /* warna latar belakang */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* bayangan */
+    transition: transform 0.3s ease; /* efek transisi saat dihover */
+
+    display: block;
+    max-width: 300px; /* lebar maksimum kartu */
+    margin: 20px;
+}
+
+.card_event:hover, .card_event2:hover {
+    transform: scale(1.05); /* memperbesar kartu saat dihover */
+}
+
+.card_event h3, .card_event2 h3 {
+    margin: 0;
+    padding: 10px;
+/*    font-size: 1.5em;*/
+}
+
+.card_event figure, .card_event2 figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.card_event img, .card_event2 img {
+    width: 100%; /* gambar mengisi lebar */
+    height: auto;
+    display: block;
+}
+
+.card_event section, .card_event2 section {
+    padding: 10px;
+}
+
+.card_event p, .card_event2 p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666; /* warna teks abu-abu */
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}

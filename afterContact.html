@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contact Us Page</title>
+	<link rel="stylesheet" href="style_ContactafterLogin.css">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+	<!-- Header -->
+    <header class="header">
+        <a href="#" class="nav_logo">Go Nature</a>
+        <nav class="nav">
+          <ul class="nav_items">
+            <li class="nav_item"><a href="afterLogin.html" class="nav_link">Home</a></li>
+            <li class="nav_item"><a href="#" class="nav_link">Event</a></li>
+            <li class="nav_item"><a href="#" class="nav_link">Berita</a></li>
+            <li class="nav_item"><a href="afterContact.html" class="nav_link">Contact</a></li>  
+          </ul>
+          <div class="menu_icon" id="menu-icon">&#9776;</div>
+          <div class="action">
+              <div class="profil" id="profile" onclick="menuToggle();">
+                <img src="assets/image/person-icon.png">
+              </div>
+              <div class="menu">
+                <h3>Someone</h3>
+                <ul>
+                  <li><i class="fas fa-user"></i><a href="#">My Profile</a></li>
+                  <li><i class="fas fa-edit"></i><a href="#">Edit</a></li>
+                  <li><i class="fas fa-cog"></i><a href="#">Setting</a></li>
+                  <li><i class="fas fa-question"></i><a href="#">Help</a></li>
+                  <li><i class="fas fa-sign-out-alt"></i><a href="index.html">Logout</a></li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+	<main>
+		<div class="contact-form">
+			<h1>Contact Us</h1>
+			<div class="container">
+				<div class="main">
+					<div class="content">
+						<h2>Contact Us</h2>
+						<form action="#" method="post">
+							<input type="text" name="name" class="name_contact" placeholder="Enter Your Name">
+							
+							<input type="email" name="name" class="name_contact" placeholder="Enter Your Email">
+							<textarea name="message" placeholder="Your Message"></textarea>                   
+							<button type="submit" class="btn1">Send <i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+					<div class="form-img">
+						<img src="Frame.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div> 
+	</main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	  <script src="script.js"></script>
+      <script type="text/javascript">
+        function menuToggle(){
+          const toggleMenu = document.querySelector('.menu');
+          toggleMenu.classList.toggle('active');
+        }
+        
+        document.getElementById('menu-icon').addEventListener('click', function () {
+          document.querySelector('.nav_items').classList.toggle('show');
+        });
+      </script>
+</body>
+</html>
